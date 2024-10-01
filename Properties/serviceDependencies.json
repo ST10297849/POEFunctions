@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "appInsights1": {
+      "type": "appInsights"
+    },
+    "storage1": {
+      "type": "storage",
+      "connectionId": "AzureWebJobsStorage"
+    }
+  },
+  "public" "async",
+  "Task" "UploadBlobAsync(IFormFile",
+  "file)" {
+    "var" "content",
+    "=" "new",
+    "MultipartFormDataContent();" "content.Add(new",
+    "StreamContent(file.OpenReadStream())",
+    "file",
+    "file.FileName);" "await",
+    "_httpClient.PostAsync(\"https://your-function-url/WriteToBlob\"",
+    "content);"
+  }
+
+}
